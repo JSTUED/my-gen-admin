@@ -25,6 +25,13 @@ router.beforeEach((to, from, next) => {
     //     }
     // }
 
+    // 缓存处理
+    if (to.meta && to.meta.keepAlive && to.meta){
+        let temp = _.cloneDeep(store.getters.include) || [];
+        let include = _.uniq([...temp, to.meta.component]);
+        store.commit("SET_INCLUDE", include);
+    }
+
     const meta = to.meta || {};
 
     // 白名单中的路由，不要登录等其他操作 直接通过
@@ -42,7 +49,10 @@ router.beforeEach((to, from, next) => {
             //如果用户信息为空则获取用户信息，获取用户信息失败，跳转到登录页
             if (store.getters.token.length === 0) {
                 store.dispatch('FedLogOut').then(() => {
-                    next({ path: '/login' })
+                    next({
+                        path: `/login?redirect=${to.path}`,
+                    })
+                    location.reload() // 为了重新实例化vue-router对象 避免bug
                 })
             } else {
                 // console.log(to);
@@ -75,7 +85,9 @@ router.beforeEach((to, from, next) => {
         if (meta.isAuth === false) {
             next()
         } else {
-            next('/login')
+            next({
+                path: `/login?redirect=${to.path}`
+            })
         }
     }
 })

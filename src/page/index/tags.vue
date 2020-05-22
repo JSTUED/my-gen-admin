@@ -68,7 +68,7 @@
             }
         },
         computed: {
-            ...mapGetters(["tagWel", "tagList", "tag", "website"]),
+            ...mapGetters(["tagWel", "tagList", "tag", "website", "include"]),
             ...mapState({
                 showTag: state => state.common.showTag
             }),
@@ -127,15 +127,24 @@
                     let { tag, key } = this.findTag(value);
                     console.log(tag);
                     this.$store.commit("DEL_TAG", tag);
+
                     // 关闭时清除缓存组件 (针对 add 创建组件)
-                    if(tag.meta.component.endsWith("-add")){
-                        this.$store.commit("SET_EXCLUDE", [tag.meta.component]);
-                        setTimeout(()=>{
-                            this.$store.commit("SET_EXCLUDE", []);
-                        }, 100);
+                    // if(tag.meta.component.endsWith("-add")){
+                    //     this.$store.commit("SET_EXCLUDE", [tag.meta.component]);
+                    //     setTimeout(()=>{
+                    //         this.$store.commit("SET_EXCLUDE", []);
+                    //     }, 100);
+                    // }
+
+                    // 关闭时缓存处理
+                    if (tag.meta && tag.meta.component){
+                        let include = this.include.filter((item)=>{
+                            return item != tag.meta.component;
+                        });
+                        this.$store.commit("SET_INCLUDE", include);
                     }
 
-                    console.log(this.$root);
+                    //console.log(this.$root);
 
                     if (tag.value === this.tag.value) {
                         tag = this.tagList[key === 0 ? key : key - 1]; //如果关闭本标签让前推一个
@@ -162,6 +171,13 @@
             closeOthersTags() {
                 this.contextmenuFlag = false;
                 this.$store.commit("DEL_TAG_OTHER");
+
+                // 关闭时缓存处理
+                let { tag, key } = this.findTag(this.$route.fullPath);
+                if (tag.meta && tag.meta.component){
+                    this.$store.commit("SET_INCLUDE", ['wel', tag.meta.component]);
+                }
+
             },
 
             closeCurrent() {
@@ -192,6 +208,8 @@
                     }),
                     query: this.tagWel.query
                 });
+
+                this.$store.commit("SET_INCLUDE", ['wel']);
             }
         }
     };

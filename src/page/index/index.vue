@@ -14,19 +14,8 @@
                 <sidebar />
             </div>
             <div class="avue-main">
-                <!-- 主体视图层 不使用el-scrollbar 使用后检测window scroll 事件存在问题 :exclude="exclude" $route.matched.length<=2 考虑到路由组件嵌套 -->
-                <div>
-                    <keep-alive :exclude="exclude">
-                        <router-view class="avue-view" v-if="$route.meta.keepAlive" />
-                    </keep-alive>
-                    <router-view class="avue-view" v-if="!$route.meta.keepAlive" />
-                </div>
-                <!--<div>-->
-                    <!--<keep-alive :exclude="exclude">-->
-                        <!--<router-view class="avue-view" v-if="$route.meta.keepAlive && $route.matched.length<=2" />-->
-                    <!--</keep-alive>-->
-                    <!--<router-view class="avue-view" v-if="!$route.meta.keepAlive || $route.matched.length>2" />-->
-                <!--</div>-->
+                <!-- 路由视图 -->
+                <router-view class="avue-view" />
             </div>
         </div>
         <div class="avue-shade"
@@ -61,9 +50,6 @@
                 refreshLock: false,
                 //刷新token的时间
                 refreshTime: "",
-                exclude: [],
-                keepAlive: true,
-                includes: [],
             };
         },
         created() {
@@ -73,29 +59,8 @@
         mounted() {
             this.init();
         },
-        computed: mapGetters(["isLock", "isCollapse", "website"]),
+        computed: mapGetters(["isLock", "isCollapse", "website", "exclude", "include"]),
         props: [],
-        // watch: {
-        //   $route: {
-        //       handler(val,oldval){
-        //           // console.log(val);
-        //           // console.log(val.meta.isRefresh);
-        //
-        //           // 指定刷新且组件初始值是缓存的
-        //           if(val.matched.length<=2 && val.meta.isRefresh == true && val.meta.keepAlive==true){
-        //               val.meta.keepAlive = false;// 切换到不缓存形式
-        //               this.exclude = [val.meta.component];// 动态销毁已缓存的组件
-        //               // console.log(this.exclude);
-        //               setTimeout(()=>{
-        //                   val.meta.keepAlive = true; // 切换到缓存状态
-        //                   this.exclude = []; // 将组件加入缓存
-        //                   val.meta.isRefresh = false; // 还原刷新状态
-        //               }, 0);
-        //           }
-        //       },
-        //       deep: true
-        //   }
-        // },
         methods: {
             showCollapse() {
                 this.$store.commit("SET_COLLAPSE");

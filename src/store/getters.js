@@ -1,6 +1,7 @@
 const getters = {
     tag: state => state.tags.tag,
     exclude: state => state.common.exclude,
+    include: state => state.common.include,
     language: state => state.common.language,
     website: state => state.common.website,
     userInfo: state => state.user.userInfo,

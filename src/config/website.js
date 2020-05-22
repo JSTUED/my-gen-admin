@@ -2,9 +2,9 @@
  * 全局配置文件  indexTitle 语言包中也要设置
  */
 export default {
-    title: "村田产品自动选型",
+    title: "杰士德UI框架",
     // indexTitle: 'Jst-Admin',
-    indexTitle: '村田产品自动选型',
+    indexTitle: '杰士德UI框架',
     clientId: 'saber', // 客户端id
     clientSecret: 'saber_secret', // 客户端密钥
     tenantMode: true, // 是否开启租户模式

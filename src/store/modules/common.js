@@ -27,6 +27,7 @@ const common = {
         lockPasswd: getStore({ name: 'lockPasswd' }) || '',
         website: website,
         exclude: [],
+        include: [],
     },
     mutations: {
         SET_LANGUAGE: (state, language) => {
@@ -91,8 +92,12 @@ const common = {
             });
         },
         SET_EXCLUDE: (state, exclude)=>{
-            console.log(exclude);
+            // console.log(exclude);
             state.exclude = exclude;
+        },
+        SET_INCLUDE: (state, include)=>{
+            // console.log(include);
+            state.include = include;
         }
     }
 }

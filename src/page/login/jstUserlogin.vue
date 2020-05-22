@@ -87,8 +87,8 @@
                             spinner: "el-icon-loading"
                         });
                         this.$store.dispatch("LoginByUsername", this.loginForm).then(() => {
-
-                            this.$router.push({ path: this.tagWel.value });
+                            let redirect = this.$route.query.redirect
+                            this.$router.push({ path: redirect || this.tagWel.value });
                             loading.close();
 
                             // 添加动态路由、

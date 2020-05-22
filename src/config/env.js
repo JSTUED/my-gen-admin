@@ -6,11 +6,10 @@ let iconfontUrl = `//at.alicdn.com/t/font_$key.css`;
 let codeUrl = `${baseUrl}/code`
 const env = process.env
 if (env.NODE_ENV == 'development') {
-    baseUrl = `http://172.16.4.68:10010`; // 开发环境地址
-} else if (env.NODE_ENV == 'production') {
+    // baseUrl = `http://172.16.4.68:10010`; // 开发环境地址
+    baseUrl = `http://admin.tsuntien.com/tsuntien_api`; // 开发环境地址
+} else {
     baseUrl = `${window.location.origin}/tsuntien_api`; //生产环境地址
-} else if (env.NODE_ENV == 'test') {
-    baseUrl = ``; //测试环境地址
 }
 export {
     baseUrl,

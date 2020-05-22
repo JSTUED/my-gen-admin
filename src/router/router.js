@@ -34,7 +34,7 @@ let Router = new VueRouter({
     routes: []
 });
 AvueRouter.install(Vue, Router, Store, i18n);
-// console.log(Store.state.user, "xxx");
+
 Router.addRoutes(PageRouter);
 Router.$avueRouter.addRoutesDynamic(Store.state.user.routes); // 刷新时添加路由
 Router.addRoutes(ViewsRouter)

@@ -8,7 +8,8 @@ export default [{
     meta: {
         keepAlive: true,
         isTab: false,
-        isAuth: false
+        isAuth: false,
+        component: "jstLogin", // 需要写上组件的name属性
     }
 },
     {
@@ -19,7 +20,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "forgetPassword", // 需要写上组件的name属性
         }
     },
     {
@@ -30,7 +32,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "lock", // 需要写上组件的name属性
         }
     },
     {
@@ -41,7 +44,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "error-404", // 需要写上组件的name属性
         }
 
     },
@@ -53,7 +57,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "error-403", // 需要写上组件的name属性
         }
     },
     {
@@ -64,7 +69,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "error-pages", // 需要写上组件的name属性
         }
     },
     {
@@ -75,7 +81,8 @@ export default [{
         meta: {
             keepAlive: true,
             isTab: false,
-            isAuth: false
+            isAuth: false,
+            component: "error-500", // 需要写上组件的name属性
         }
     },
     {

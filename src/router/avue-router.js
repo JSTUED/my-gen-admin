@@ -234,7 +234,7 @@ RouterPlugin.install = function (vue, router, store, i18n) {
             }
 
             let routes = extendNav(aMenu);
-            // console.log(routes);
+            console.log(routes);
             this.safe.$router.addRoutes(routes); // 动态添加路由 与page和view中的一起添加
             this.routerList = [...this.routerList, ...routes];
             return routes;

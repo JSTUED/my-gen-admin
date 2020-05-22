@@ -1,14 +1,14 @@
 export default {
   tip: '提示',
-  title: '村田产品自动选型',
+  title: '杰士德UI框架',
   logoutTip: '退出系统, 是否继续?',
   submitText: '确定',
   cancelText: '取消',
   search: '请输入搜索内容',
   menuTip: '没有发现菜单',
   wel: {
-    info: '早安，Smallwei，Avuex一款超乎你想象的框架！',
-    dept: '我是avue团队下的一个部门-哈皮部门-哈皮职位',
+    info: '一款超乎你想象的框架！',
+    dept: '部门-哈皮部门-哈皮职位',
     team: '团队内排名',
     project: '项目访问',
     count: '项目数',
