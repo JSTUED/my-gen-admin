@@ -1,0 +1,285 @@
+// 自定义常用样式
+.m-l-10{
+  margin-left: 10px;
+}
+.m-r-10{
+  margin-right: 10px;
+}
+.m-t-10{
+  margin-top: 10px;
+}
+.m-b-10{
+  margin-bottom: 10px;
+}
+.mt0{
+  margin-bottom: 0px !important;
+}
+.text-bold{
+  font-weight: bold;
+}
+.text-center{
+  text-align: center;
+}
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.font12{
+  font-size: 12px;
+}
+.float-r{
+  float: right;
+}
+
+//自定义表格
+.st-table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #EBEBEB;
+  td{
+    border-top: 1px solid #e7eaec;
+    line-height: 1.42857;
+    padding: 8px;
+    //vertical-align: top;
+  }
+}
+.st-detail{
+  tr{
+    td:nth-child(2n-1){
+      background-color: #EDEDEF;
+      font-weight: bold;
+    }
+  }
+}
+
+/*标签*/
+.st-tag{
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: inline-block;
+  min-width: 10px;
+  border-radius: 4px;
+  background-color: $icon-color;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 7px;
+  text-shadow: none;
+  line-height: 1;
+  position: relative;
+}
+.st-tag-danger{
+  background-color: $danger-color;
+}
+.st-tag-warn{
+  background-color: $warn-color;
+}
+.st-tag-success{
+  background-color: $success-color;
+}
+.st-tag-info{
+  background-color: $info-color;
+}
+.st-tag-primary{
+  background-color: $primary-color;
+}
+.st-tag-default{
+  background-color: $icon-color;
+}
+
+.st-tag-round{
+  min-width: 20px;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.st-tag-large{
+  padding: 8px 15px;
+}
+.st-tag .st-tag-operate{
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  color: #999999;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  line-height: 12px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.st-tag-white{
+  background-color: #fff;
+  border: 1px solid #999;
+  color: #000;
+}
+.st-tag .st-tag-operate.st-tag-selected{
+  border-color: #3aa1ff;
+  background-color: #3aa1ff;
+  color: #3aa1ff;
+}
+
+.st_sweep_code {
+  .st_sweep_code_list{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .el-icon-check{
+    font-size: 12px;
+    color: #fff;
+  }
+}
+/*标签结束*/
+
+/* 树形结构 + 表格/表单 布局css */
+.tree-wrap{
+  display: flex;
+  .left{
+    //width: 300px;
+    flex: 0 0 300px;
+  }
+
+  .between{
+    display: flex;
+    //justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .expand{
+    display: flex;
+    //width: 50px;
+    flex: 0 0 50px;
+    //background: grey;
+    align-items: center;
+    justify-content: center;
+    span{
+      font-size: 16px;
+      cursor: pointer;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  .right{
+    //flex: 1 1 auto;
+    flex: 1;
+    overflow-x: auto;
+  }
+  .tree-search{
+    .el-input-group__append{
+      background:  $primary-color;
+      color: #fff;
+      border: 1px solid  $primary-color;
+      cursor: pointer;
+      padding: 0px;
+      span{
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .el-checkbox + .el-tree-node__label{
+    margin-left: 5px;
+  }
+
+  .el-tree-node.is-current>.el-tree-node__content>.el-tree-node__label{
+    color: $primary-color;
+  }
+  .cancel-tree-select{
+    cursor: pointer;
+  }
+}
+
+
+// vxe表格部分
+.st-vxe-table{
+  .opt-icon{
+    color: #3aa1ff;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .opt-icon + .opt-icon{
+    margin-left: 15px;
+  }
+}
+
+
+// 图表
+.echart-container-demo{
+  width: 500px;
+  height: 350px;
+  margin-bottom: 60px;
+}
+
+//富文本编辑器
+.cke_top, .cke_bottom{
+  background: #ededef!important;
+}
+
+// 自定义提示
+.st-tip{
+  padding: 12px 20px 14px 20px;
+  border-left: 4px solid $border-color;
+  background: #eee;
+}
+.st-tip-danger{
+  border-color: $danger-color;
+}
+.st-text-danger{
+  color: $danger-color;
+}
+.st-tip-warn{
+  border-color: $warn-color;
+}
+.st-text-warn{
+  color: $warn-color;
+}
+.st-tip-success{
+  border-color: $success-color;
+}
+.st-text-success{
+  color: $success-color;
+}
+.st-tip-info{
+  border-color: $info-color;
+}
+.st-text-info{
+  color: $info-color;
+}
+.st-tip-primary{
+  border-color: $primary-color;
+}
+.st-text-primary{
+  color: $primary-color;
+}
+
+
+//mes 表格新增按钮样式
+.mes-add-btn{
+  border-color: #3aa1ff;
+  color: #3aa1ff;
+}
+
+
+.st-input-w{
+  width: 220px !important;
+}
+
+.search-wrap .el-card__body{
+  padding-bottom: 0px;
+}
+
+
+.st-input-num.el-input-number .el-input__inner{
+  text-align: left;
+}
+
+.img-tip-msg{
+  color: #f00;
+}

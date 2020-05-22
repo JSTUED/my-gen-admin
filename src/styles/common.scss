@@ -1,0 +1,75 @@
+// 全局变量
+@import './variables.scss';
+// ele样式覆盖
+@import './element-ui.scss';
+// 顶部右侧显示
+@import './top.scss';
+// 导航标签
+@import './tags.scss';
+// 工具类函数
+@import './mixin.scss';
+// 侧面导航栏
+@import './sidebar.scss';
+// 动画
+@import './animate/vue-transition.scss';
+//主题
+@import './theme/index.scss';
+//适配
+@import './media.scss';
+//通用配置
+@import './normalize.scss';
+//基础样式
+@import './jst-basic.scss';
+
+// vxe 表格样式
+@import "./vxe-table.scss";
+
+// 自定义样式
+@import "./custom.scss";
+
+// 网站样式
+@import "./web.scss";
+
+a{
+  text-decoration: none;
+  color:#333;
+}
+*{
+  outline: none;
+}
+body{
+  //"Microsoft JhengHei",
+  font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  color: #000 !important;
+  background: #e9ebea;
+  font-size: 12px !important;
+}
+
+pre{
+  margin: 0px;
+  padding: 0px;
+}
+code{
+  line-height: 1.8;
+  font-size: 12px;
+}
+pre code{
+  font-family: "Microsoft JhengHei", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+}
+[class*="iconfont"], [class^=icon-] {
+  speak: none;
+  font-style: normal;
+  font-size: inherit;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gantt_cell{
+  font-size: 12px !important;
+}

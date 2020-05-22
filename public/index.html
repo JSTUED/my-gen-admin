@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--禁用缓存-->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <link rel="stylesheet" href="<%= BASE_URL %>cdn/element-ui/2.12.0/element-theme-jst/theme/index.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>cdn/animate/3.5.2/animate.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>cdn/iconfont/1.0.0/index.css">
+    <!--<link rel="icon" href="<%= BASE_URL %>img/jst.ico">-->
+    <link rel="icon" href="<%= BASE_URL %>logo4.png">
+    <!--引入阿里字体-->
+    <link rel="stylesheet" href="<%= BASE_URL %>cdn/iconfont/font_ali/iconfont.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">-->
+
+    <title>杰士德考勤系统</title>
+    <style>
+        html,
+        body,
+        #app {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jst-home {
+            background-color: #4a5c6a;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jst-home__main {
+            user-select: none;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .jst-home__footer {
+            width: 100%;
+            flex-grow: 0;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .jst-home__footer > a {
+            font-size: 12px;
+            color: #ABABAB;
+            text-decoration: none;
+        }
+
+        .jst-home__loading {
+            height: 32px;
+            width: 32px;
+            margin-bottom: 20px;
+        }
+
+        .jst-home__title {
+            color: #FFF;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .jst-home__sub-title {
+            color: #ABABAB;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<noscript>
+    <strong>
+        很抱歉，如果没有 JavaScript 支持，JST-TEMPLATE-ADMIN 将不能正常工作。请启用浏览器的 JavaScript 然后继续。
+    </strong>
+</noscript>
+<div id="app">
+    <div class="jst-home">
+        <div class="jst-home__main">
+            <img class="jst-home__loading" src="./svg/loading-spin.svg" alt="loading">
+            <div class="jst-home__title">
+                正在加载资源 请稍后
+            </div>
+
+        </div>
+        <div class="jst-home__footer">
+            <a href="https://ued.justech.com" target="_blank">
+                Copyright 杰士德UI框架第三期 © 2018-2019 </a>
+        </div>
+    </div>
+</div>
+<!-- built files will be auto injected -->
+<script src="<%= BASE_URL %>util/aes.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/vue/2.6.10/vue.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/vuex/3.1.1/vuex.min.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/vue-router/3.0.7/vue-router.min.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/axios/1.0.0/axios.min.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/element-ui/2.12.0/index.js" charset="utf-8"></script>
+<script src="<%= BASE_URL %>cdn/lodash/lodash.min.js" charset="utf-8"></script>
+<!--ckeditor 富文本编辑器-->
+<script src="<%= BASE_URL %>cdn/ckeditor-4.13.0-full/ckeditor.js"></script>
+
+
+</body>
+
+</html>

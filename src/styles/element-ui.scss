@@ -1,0 +1,456 @@
+.el-dropdown-menu__item {
+  font-size: 12px !important;
+  line-height: 28px !important;
+}
+
+.el-card.is-always-shadow {
+  box-shadow: none;
+  border: none !important;
+}
+
+.el-scrollbar__view {
+  height: 100%;
+}
+
+.el-menu--horizontal {
+  border-bottom: none !important;
+}
+
+.el-menu {
+  border-right: none !important;
+}
+
+.el-menu--display,
+.el-menu--display + .el-submenu__icon-arrow {
+  display: none;
+}
+
+
+.el-message__icon,
+.el-message__content {
+  display: inline-block;
+}
+
+.el-date-editor .el-range-input,
+.el-date-editor .el-range-separator {
+  height: auto;
+  overflow: hidden;
+}
+
+
+//.el-scrollbar__wrap {
+//    overflow-x: hidden;
+//}
+
+.el-col {
+  margin-bottom: 8px;
+}
+
+.el-main {
+  padding: 0 !important;
+}
+
+.el-dropdown-menu__item--divided:before, .el-menu, .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover, .el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+  background-color: transparent;
+}
+
+
+.el-dropdown-menu__item--divided:before, .el-menu, .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover, .el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+  background-color: transparent !important;
+}
+
+//.el-select-dropdown__wrap{
+//  margin-bottom: auto !important;
+//}
+//多选框禁用样式修改
+.el-checkbox__input.is-disabled .el-checkbox__inner {
+  background-color: #fff !important;
+  border-color: #e7e7e7 !important;
+}
+
+.el-checkbox__input.is-disabled + span.el-checkbox__label {
+  color: #c3c3c3 !important;
+}
+
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
+  background-color: #e7e7e7 !important;
+  border-color: #e7e7e7 !important;
+}
+
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__original {
+  color: #fff !important;
+}
+
+//input 输入框显示内容默认字体
+.el-input__inner::placeholder,
+.el-textarea__inner::placeholder {
+  color: #666 !important;
+}
+
+.el-input__inner:hover,
+.el-textarea__inner:hover {
+  border-color: #c3c3c3 !important;
+}
+
+.el-input__inner:focus,
+.el-textarea__inner:focus {
+  border-color: #3aa1ff !important;
+}
+
+//下拉框选中
+//.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+//  color: #FFF !important;
+//  background-color: #3AA1FF !important;
+//}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  color: #FFF !important;
+  background-color: #3AA1FF !important;
+}
+
+.el-select-dropdown__item.is-disabled:hover {
+  color: #c3c3c3 !important;
+  background-color: transparent !important;
+}
+
+.el-select-dropdown__item.is-disabled {
+  color: #c3c3c3 !important;
+}
+
+.el-select-group__title {
+  color: #666666 !important;
+}
+
+//菜单图标样式
+.el-menu-item [class^=iconfont], .el-submenu [class^=iconfont] {
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+
+//标签背景颜色
+.el-tag {
+  background-color: #3aa1ff !important;
+  color: #fff !important;
+}
+
+.el-tag .el-tag__close {
+  color: #fff !important;
+}
+
+.el-tag.el-tag--info {
+  border-color: #c3c3c3 !important;
+  background-color: #eeeeee !important;
+  color: #000 !important;
+}
+
+.el-tag.el-tag--success {
+  background-color: #6bb377 !important;
+  color: #fff !important;
+}
+
+.el-tag.el-tag--warning {
+  background-color: #f08f00 !important;
+  color: #fff !important;
+}
+
+.el-tag.el-tag--danger {
+  background-color: #ed5565 !important;
+  color: #fff !important;
+}
+
+//日期时间选择器
+.el-time-spinner__item:hover:not(.disabled):not(.active) {
+  background-color: #3aa1ff;
+  color: #fff;
+}
+
+.el-time-spinner__item.active:not(.disabled) {
+  background-color: #3aa1ff;
+  color: #fff;
+}
+
+
+//按钮
+.el-button {
+  .iconfont {
+    font-size: inherit;
+    color: inherit;
+
+  }
+
+  .iconfont + span {
+    margin-left: 5px;
+  }
+}
+
+// 弹框
+.el-dialog__wrapper {
+  z-index: 2048;
+}
+
+.el-dialog {
+  margin-bottom: 0px;
+}
+
+.el-dialog__header {
+  padding: 10px 20px 10px;
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.el-dialog__title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.el-dialog__headerbtn {
+  top: 10px;
+}
+
+//抽屉
+.el-drawer__header {
+  padding: 10px 20px 10px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 0;
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #000;
+  }
+}
+
+.el-drawer__body {
+  padding: 20px;
+}
+
+
+// 步骤条
+.el-step__head.is-wait {
+  color: #999;
+  border-color: #999;
+}
+
+.el-step__line {
+  background-color: #999;
+}
+
+// 修改左侧菜单提示文字样式
+.el-tooltip__popper.is-dark {
+  background: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+  border-bottom-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow::after {
+  border-bottom-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow {
+  border-left-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow::after {
+  border-left-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow {
+  border-right-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+  border-right-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow {
+  border-top-color: #4a5c6a;
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+  border-top-color: #4a5c6a;
+}
+
+
+//白色主题
+.el-menu--horizontal > .el-menu-item.is-active i, .el-menu--horizontal > .el-menu-item.is-active span {
+  color: #f08f00 !important;
+}
+
+.el-button--small.is-circle {
+  width: 32px;
+  height: 32px;
+}
+
+.el-radio__input.is-checked + .el-radio__label, .el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #000;
+}
+
+.el-radio__label, .el-checkbox__label, .el-form-item__label {
+  font-size: 12px;
+}
+
+.el-cascader-node:not(.is-disabled):focus, .el-cascader-node:not(.is-disabled):hover {
+  background: #3aa1ff;
+  color: #fff;
+}
+
+//拖拽表格
+.el-table thead th {
+  background-color: #ededef;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #e6f7ff;
+}
+
+.el-table__row:nth-child(even) {
+  background-color: #f5f5f6;
+}
+
+//复杂表格
+.el-step__title.is-wait, .el-step__description.is-wait {
+  color: #000;
+}
+
+.el-time-spinner__wrapper.is-arrow .el-time-spinner__item:hover:not(.disabled):not(.active) {
+  background-color: #3AA1FF;
+}
+
+//树形结构构
+.el-tree-node__label {
+  font-size: 12px;
+}
+
+// 表单
+.el-form-item__label {
+  font-size: 12px;
+}
+.el-form-item__content{
+  font-size: 12px;
+}
+
+.time-select-item:hover {
+  background-color: #3AA1FF;
+  color: #fff;
+}
+
+.el-transfer-panel__item {
+  display: block;
+}
+
+.el-popper[x-placement^=bottom] .popper__arrow {
+  top: -7px;
+}
+
+
+//下拉菜单
+.el-dropdown-menu {
+  padding: 0px 0;
+
+  .el-dropdown-menu__item:focus,
+  .el-dropdown-menu__item:not(.is-disabled):hover {
+    background-color: #3aa1ff;
+    color: #fff;
+  }
+}
+
+.el-input--small {
+  font-size: 12px !important;
+}
+
+.el-tooltip__popper.is-light {
+  border-color: $border-color;
+}
+
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+  border-top-color: $border-color;
+}
+
+.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow {
+  border-right-color: $border-color;
+}
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+  border-bottom-color: $border-color;
+}
+
+.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow {
+  border-left-color: $border-color;
+}
+
+
+//Badge 标记样式修改
+.el-badge__content {
+  border: 1px solid transparent;
+}
+
+
+//下拉菜单样式修改
+.el-menu--horizontal {
+  .el-menu--popup {
+    padding: 0;
+
+    .el-menu-item {
+      padding: 0 5px;
+      border-bottom: 1px solid #e7e7e7;
+
+      i, span {
+        color: #666;
+      }
+
+      &:hover {
+        i, span {
+          color: #333;
+        }
+      }
+
+      &.is-active {
+        background-color: #e9ebea !important;
+
+        &:before {
+          content: '';
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          background: #409eff;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+
+//输入框图标大小修改以及显示文字修改
+.el-input {
+  .el-input__prefix {
+    .el-input__icon {
+      font-size: 16px !important;
+    }
+  }
+
+  .el-input__suffix {
+    .el-input__icon {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.el-date-editor .el-range__icon {
+  font-size: 16px;
+}
+
+.el-range-editor--small .el-range-input {
+  font-size: 12px;
+}

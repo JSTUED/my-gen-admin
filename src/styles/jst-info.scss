@@ -1,0 +1,139 @@
+.info-body{
+  min-width: 1000px;
+}
+.left-nav{
+  width: 17%;
+  .el-col{
+    border: 1px solid #e7e7e7;
+    li{
+      border-bottom: 1px solid #e7e7e7;
+    }
+    li:last-child{
+      border-bottom: none;
+    }
+  }
+  .spot{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #999;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .el-menu-item.is-active {
+    background-color: #e9ebea;
+    .spot{
+      background-color: #3AA1FF;
+    }
+  }
+}
+.right-content{
+  width: 80%;
+  float: left;
+  margin-left: 30px;
+  .right-content-title{
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  //基本信息
+  .right-content-list{
+    width: 40%;
+    .el-select, .el-cascader--medium{
+      width: 100%;
+    }
+    .el-form-item__label{
+      text-align: left;
+    }
+    .el-textarea__inner{
+      resize: none;
+    }
+  }
+  .basic-msg{
+    .avatar-uploader .el-upload {
+      border: 1px dashed #d9d9d9;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .avatar-uploader .el-upload:hover {
+      border-color: #409EFF;
+    }
+    .avatar-uploader-icon {
+      font-size: 28px;
+      color: #8c939d;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+    }
+    .avatar {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
+  }
+  //安全设置
+  .right-setting-list{
+    .list-text-right{
+      text-align: right;
+      color: #3AA1FF;
+      cursor: pointer;
+    }
+    .row-bg{
+      height: 70px;
+      line-height: 20px;
+      font-size: 14px;
+      border-bottom: 1px solid #E7E7E7;
+      .el-col{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//修改密码身份验证
+.testing-content{
+  width: 300px;
+  margin: 150px auto 0 auto;
+  text-align: center;
+  i{
+    font-size: 30px!important;
+    color: #4a5c6a;
+  }
+  .test-title{
+    margin: 10px 0 50px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .test-tip{
+    margin-bottom: 15px;
+  }
+  .test-btn{
+    margin-top: 20px;
+  }
+}
+.el-message-box--center{
+  padding-bottom: 20px!important;
+}
+.el-message-box__title{
+  font-size: 14px!important;
+}
+.el-message-box__message p{
+  font-size: 12px;
+}
+.new-password{
+  .error-tip{
+    color: red;
+    font-size: 12px;
+  }
+  input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 12px;
+  }
+  .new-code{
+    width: 59%;
+    margin-right: 10px;
+  }
+}
+
+

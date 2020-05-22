@@ -1,0 +1,147 @@
+.avue-header{
+  z-index: 11 !important; //幻灯片层级高于顶部导航
+}
+.avue-top {
+  padding: 0 20px;
+  position: relative;
+  //box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, .65);
+  font-size: 28px;
+  height: 64px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  .el-menu-item{
+    span{
+      font-size: 14px;
+    }
+    i{
+      font-size: 16px;
+    }
+  }
+}
+.avue-breadcrumb {
+  height: 100%;
+  i{
+    font-size: 22px !important;
+  }
+  &--active {
+    transform:rotate(180deg);
+  }
+}
+
+.top-menu {
+  box-sizing: border-box;
+  .el-menu-item {
+    padding: 0 10px;
+    border:none !important;
+  }
+}
+//一级菜单收缩
+.el-menu-item.top-menu-drop{
+  i{
+    color: #4a5c6a !important;
+  }
+  span{
+    color: #000 !important;
+  }
+}
+.el-menu--popup .el-menu-item.top-menu-drop.is-active{
+  background-color: #fff;
+}
+.el-menu--popup .el-menu-item.top-menu-drop.is-active:before{
+  background-color: #fff;
+}
+.top-menu-drop-sub.el-submenu.is-active .el-submenu__title{
+  color: #f08f00 !important;
+  border-bottom-color: transparent !important;
+  >i{
+    color: #f08f00 !important;
+  }
+}
+
+//防止 element-ui 导航菜单的 active-text-color 不起作用
+.el-menu-item i{
+  color: #4a5c6a;
+}
+
+.top-search {
+  line-height: 64px;
+  position: absolute !important;
+  left: 20px;
+  top:0;
+  width: 400px !important;
+  .el-input__inner {
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.top-bar__img {
+  margin: 0 8px 0 5px;
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+
+.top-bar__left,
+.top-bar__right {
+  height: 64px;
+  position: absolute;
+  top: 0;
+  i{
+    line-height: 64px;
+    color: $main-color;
+  }
+}
+
+.top-bar__left {
+  left: 20px;
+}
+
+.top-bar__right {
+  right: 20px;
+  display: flex;
+  align-items: center;
+  i{
+    cursor: pointer;
+  }
+}
+
+.top-bar__item {
+  position: relative;
+  display: inline-block;
+  height: 64px;
+  margin:0 10px;
+  font-size: 16px;
+  &--show {
+    display: inline-block !important;
+  }
+  .el-badge__content.is-fixed{
+    top:19px;
+    right: 13px;
+    height: 16px;
+    line-height: 14px;
+    padding: 0 4px;
+  }
+}
+
+.top-bar__title {
+  height: 100%;
+  padding:0 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: inherit;
+  font-weight: 400;
+}
+.top-more-menu .el-menu--popup{
+  min-width: 150px;
+}
+
+
