@@ -33,6 +33,20 @@ export const RotationList = {
     20: "壳转动"
 };
 
+/**
+ * isp 处理状态
+ * @type {{}}
+ */
+export const DealWithStatus = {
+    1: "新创建",
+    2: "待受理",
+    3: "处理中",
+    4: "已完成",
+    5: "确认关闭",
+    6: "自动关闭",
+    7: "已取消"
+}
+
 
 
 

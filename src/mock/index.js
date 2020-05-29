@@ -12,7 +12,7 @@ user({mock: true});
 
 // menu({mock: true});
 
-// table({mock: true});
+table({mock: true});
 
 
 

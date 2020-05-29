@@ -1,60 +1,64 @@
-import request from '@/router/axios';
+import request from '@/router/request';
 import {baseUrl} from '@/config/env';
 import { menuBottons, menuSource, navMenuList, systemRoutes }  from "../mock/routesData";
 
 // 登录
 export const loginByUsername = (username, password) => {
 
-    // return new Promise((resolve, reject)=>{
-    //     console.log("/api/blade-auth/token api");
-    //     let data = {
-    //         "account": "admin",
-    //         "user_name": "admin",
-    //         "nick_name": "管理员",
-    //         "role_name": "administrator",
-    //         "avatar": "img/bg/profile-1.png",
-    //         "access_token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiIwMDAwMDAiLCJyb2xlX25hbWUiOiJhZG1pbmlzdHJhdG9yIiwidXNlcl9pZCI6IjExMjM1OTg4MjE3Mzg2NzUyMDEiLCJyb2xlX2lkIjoiMTEyMzU5ODgxNjczODY3NTIwMSIsInVzZXJfbmFtZSI6ImFkbWluIiwibmlja19uYW1lIjoi566h55CG5ZGYIiwidG9rZW5fdHlwZSI6ImFjY2Vzc190b2tlbiIsImRlcHRfaWQiOiIxMTIzNTk4ODEzNzM4Njc1MjAxIiwiYWNjb3VudCI6ImFkbWluIiwiY2xpZW50X2lkIjoic2FiZXIiLCJleHAiOjE1NjI5MDY0MzYsIm5iZiI6MTU2MjkwMjgzNn0.yc862BmmmADTD310DwQCGY9JJYiBGHJG_GNyhMf_CfU",
-    //         "refresh_token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ1c2VyX2lkIjoiMTEyMzU5ODgyMTczODY3NTIwMSIsInRva2VuX3R5cGUiOiJyZWZyZXNoX3Rva2VuIiwiY2xpZW50X2lkIjoic2FiZXIiLCJleHAiOjE1NjM1MDc2MzYsIm5iZiI6MTU2MjkwMjgzNn0.llJ3itSsH-eb2gdpE1IrpohZE0S_7PSBz3Jr6BXFZ1E",
-    //         "token_type": "bearer",
-    //         "expires_in": 55163,
-    //         "license": "powered by bladex"
-    //     };
-    //     resolve({data})
-    // })
+    return new Promise((resolve, reject) => {
+        let user = {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@justech.com",
+            "nick": "管理员",
+            "password": "e10adc3949ba59abbe56e057f20f883e",
+            "avatar": null,
+            "role": "super",
+            "openid": null,
+            "sign": null,
+            "phone": null,
+            "sex": 1,
+            "address": null,
+            "active": true,
+            "delete": false,
+            "createTime": "2020-04-07 17:24:45",
+            "updateTime": "2020-04-07 17:24:49",
+            "lastLogin": "2020-04-07 17:24:51"
+        };
+        let token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1ZWR0c3VudGllbiIsImlkIjoxLCJlbWFpbCI6ImFkbWluQGp1c3RlY2guY29tIiwidXNlcm5hbWUiOiJhZG1pbiIsImFjdGl2ZSI6dHJ1ZSwiZGVsZXRlIjpmYWxzZSwiaWF0IjoxNTkwNjU0MTY2LCJleHAiOjE1OTEyNTg5NjZ9.Kfjl7nCAbpfrZG91nioNLxLk2aRI1z6QRFUzGlBgarw";
 
-    return request({
-        url: baseUrl + '/admin/login',
-        method: 'get',
-        params: {
-            username: username,
-            password: password,
-        }
-    }).then(res=>{
-        return new Promise(resolve => {
-            // let respones_data = _.cloneDeep(res.data);
-            // let data = respones_data.data;
-            // //console.log(data);
-            // let user = {
-            //     "account": data.user.email,
-            //     "user_name": data.user.username,
-            //     "nick_name": data.user.nick,
-            //     "role_name": "",
-            //     "avatar": data.user.avatar,
-            //     "access_token": data.token,
-            //     "refresh_token": data.token,
-            //     "token_type": "bearer",
-            //     "expires_in": 55163,
-            //     "license": "powered by bladex"
-            // };
-            // resolve({data: user})
-            if (res.data.code == 1){
-                let data = res.data.data;
-                localStorage.setItem("user", JSON.stringify(data.user));
-                localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", token);
+
+        resolve({
+            data: {
+                code: 1,
+                data: {
+                    user: user,
+                    token: token
+                }
             }
-            resolve(res)
         })
     });
+
+    // 正式环境请使用下面代码
+    // return request({
+    //     url: baseUrl + '/admin/login',
+    //     method: 'get',
+    //     params: {
+    //         username: username,
+    //         password: password,
+    //     }
+    // }).then(res=>{
+    //     return new Promise(resolve => {
+    //         if (res.data.code == 1){
+    //             let data = res.data.data;
+    //             localStorage.setItem("user", JSON.stringify(data.user));
+    //             localStorage.setItem("token", data.token);
+    //         }
+    //         resolve(res)
+    //     })
+    // });
 
 };
 

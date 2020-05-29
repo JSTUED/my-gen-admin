@@ -27,23 +27,16 @@ module.exports = {
     },
     devServer: {
         // 端口配置
-        port: 10011,
+        port: 10099,
         // 反向代理配置
-        proxy: {
-            '/api': {
-                target: 'http://localhost',
-                ws: true,
-                pathRewrite: {
-                    '^/api': '/'
-                }
-            },
-            '/element': {
-                target: 'https://element.eleme.cn/#/zh-CN',
-                ws: true,
-                pathRewrite: {
-                    '^/element': '/'
-                }
-            }
-        },
+        // proxy: {
+        //     '/api': {
+        //         target: 'http://localhost',
+        //         ws: true,
+        //         pathRewrite: {
+        //             '^/api': '/'
+        //         }
+        //     },
+        // },
     }
 }

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import axios from './router/axios';
+import request from './router/request';
 import VueAxios from 'vue-axios';
 import App from './App';
 import router from './router/router';
@@ -9,10 +9,7 @@ import store from './store';
 
 import * as urls from '@/config/env';
 import Element from 'element-ui';
-import {
-    iconfontUrl,
-    iconfontVersion
-} from '@/config/env';
+
 import i18n from './lang' // Internationalization
 
 import '@/util/vxe-table'
@@ -39,13 +36,10 @@ import installDirective from '@/directive'; // 全局指令
 installDirective(Vue); // 注册全局指令
 
 
-//引入阿里字体
-import "../public/cdn/iconfont/font_ali/iconfont.css";
-
 import './styles/common.scss'; // 放到下面 防止干扰
 
 Vue.use(router)
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, request)
 Vue.use(Element, {
     i18n: (key, value) => i18n.t(key, value),
     size: 'small' // set element-ui default size

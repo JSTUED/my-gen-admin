@@ -1,9 +1,6 @@
 // 配置编译环境和线上环境之间的切换
 
 let baseUrl = '';
-let iconfontVersion = ['567566_pwc3oottzol', '1066523_v8rsbcusj5q'];
-let iconfontUrl = `//at.alicdn.com/t/font_$key.css`;
-let codeUrl = `${baseUrl}/code`
 const env = process.env
 if (env.NODE_ENV == 'development') {
     // baseUrl = `http://172.16.4.68:10010`; // 开发环境地址
@@ -11,10 +8,8 @@ if (env.NODE_ENV == 'development') {
 } else {
     baseUrl = `${window.location.origin}/tsuntien_api`; //生产环境地址
 }
+
 export {
     baseUrl,
-    iconfontUrl,
-    iconfontVersion,
-    codeUrl,
     env
 }

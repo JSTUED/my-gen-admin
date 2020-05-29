@@ -2,10 +2,11 @@ export default {
     data(){
         return {
             orginSearchForm: {},
-            tablePage: {
-                total: 0,
-                currentPage: 1,
+            pagination:{
+                totalItemsCount: 0,
                 pageSize: 30,
+                currentPage: 1,
+                totalPages: 0,
                 background: true
             },
             tableForm: {},
@@ -29,8 +30,8 @@ export default {
 
         // 分页发生改变事件
         handlePageChange ({ currentPage, pageSize }) {
-            this.tablePage.currentPage = currentPage
-            this.tablePage.pageSize = pageSize
+            this.pagination.currentPage = currentPage
+            this.pagination.pageSize = pageSize
             this.findList()
         },
 
@@ -39,7 +40,7 @@ export default {
             this.tableForm = _.cloneDeep(this.searchForm);
             // 回调处理参数
             if(callback) callback();
-            this.tablePage.currentPage = 1;
+            this.pagination.currentPage = 1;
             this.findList();
         },
 
@@ -47,9 +48,7 @@ export default {
         findList (callback) {
             this.loading = true;
             this.getList({
-                //tablePage: this.tablePage, // 分页
-                currentPage: this.tablePage.currentPage,
-                pageSize: this.tablePage.pageSize,
+                pagination: this.pagination, // 分页
                 ...this.tableForm  // 查询数据
             }).then(res => {
                 // 使用回调自定义数据处理
@@ -60,10 +59,11 @@ export default {
                 }
                 // 没有回调时默认处理
                 let data = res.data;
-                if(data.code == 1){
-                    let { tablePage, list } = data.data;
+                console.log(res, data);
+                if(data.code == 200 && !data.isError){
+                    let { pagination, list } = data.data;
                     this.tableData = list;
-                    this.tablePage.totalResult = tablePage.total;
+                    this.pagination.totalItemsCount = pagination.totalItemsCount;
                     // console.log(list);
                 }
                 this.loading = false;

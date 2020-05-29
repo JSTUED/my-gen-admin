@@ -16,7 +16,7 @@ export default ({ mock })=>{
         }catch (e) {
 
         }
-        let len = body.tablePage.pageSize || 10;
+        let len = body.pagination.pageSize || 30;
         for (let i=0;i<len; i++){
             list.push(Mock.mock({
                 id: Mock.mock('@increment'),
@@ -33,13 +33,14 @@ export default ({ mock })=>{
 
         return {
             "code": 200,
-            "success": true,
-            "msg": "操作成功",
+            "isError": false,
+            "message": "",
             "data": {
-                tablePage: {
-                    total: 153,
+                pagination: {
+                    totalItemsCount: 153, // 总条数
                     currentPage: 1,
-                    pageSize: 10
+                    pageSize: 30,
+                    totalPages: 6
                 },
                 list: list
             }

@@ -4,10 +4,8 @@
 * */
 
 import adminRoutesSys from "./views/admin-sys";
-import modelRoutesSys from "./views/model/model-sys"
 
 
 export default [
-    modelRoutesSys,
     adminRoutesSys
 ];

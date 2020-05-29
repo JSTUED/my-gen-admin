@@ -1,11 +1,11 @@
 import adminRoutes from "./views/admin"
-import modelRoutes from "./views/model/model"
+import ispRoutes from "./views/isp/isp"
 
 /*
 * 菜单路由
 * */
 
 export default [
-    modelRoutes,
+    ispRoutes,
     adminRoutes,
 ];
