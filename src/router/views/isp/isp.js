@@ -52,6 +52,20 @@ const isp = {
                 i18n: "i-deal-with",
                 keepAlive: true
             },
+        },
+        {
+            id: "detail-info",
+            label: "工单详情",
+            path: "/requst-apply-hdr/detail-info",
+            icon: "iconfont icon-renyuanjieshao",
+            parentId: "isp-view",
+            component: "/isp/requst-apply-hdr/detail-info",
+            level: 2,
+            children: null,
+            meta: {
+                i18n: "detail-info",
+                keepAlive: true
+            },
         }
     ],
 };
