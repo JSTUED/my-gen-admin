@@ -4,7 +4,7 @@
 export default {
     title: "杰士德UI框架",
     // indexTitle: 'Jst-Admin',
-    indexTitle: '杰士德UI框架',
+    indexTitle: '智能服务平台',
     clientId: 'saber', // 客户端id
     clientSecret: 'saber_secret', // 客户端密钥
     tenantMode: true, // 是否开启租户模式

@@ -19,6 +19,11 @@
         </span>
       </template>
     </transition-group>
+    <div class="role">
+      <img v-if="isRole" src="../../assets/images/fuwu.png" alt="">
+      <img v-else src="../../assets/images/faqi.png" alt="">
+      <i class="iconfont icon-zhuanhuan1" @click="roleChange()"></i>
+    </div>
   </div>
 </template>
 
@@ -27,13 +32,19 @@ import { mapGetters } from "vuex";
 export default {
   name: "logo",
   data() {
-    return {};
+    return {
+      isRole: true,
+    };
   },
   created() {},
   computed: {
     ...mapGetters(["website", "keyCollapse"])
   },
-  methods: {}
+  methods: {
+    roleChange(){
+      this.isRole = !this.isRole;
+    }
+  }
 };
 </script>
 
@@ -70,7 +81,7 @@ export default {
     div {
       display: flex;
       align-items: center;
-      justify-content: center;
+      /*justify-content: center;*/
       width: 100%;
       /*font-family: "Microsoft JhengHei",微软雅黑;*/
       /*font-weight: 700;*/
@@ -78,6 +89,7 @@ export default {
       color: #fff;
       img {
         margin-right: 5px;
+        margin-left: 20px;
       }
     }
   }
@@ -90,4 +102,17 @@ export default {
     color: #fff;
   }
 }
+  .role{
+    img{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    i{
+      position: absolute;
+      top: 22px;
+      right: 35px;
+      cursor: pointer;
+    }
+  }
 </style>
