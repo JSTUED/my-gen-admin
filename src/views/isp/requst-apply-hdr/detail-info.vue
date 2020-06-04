@@ -146,12 +146,12 @@
                     <!--确认受理弹窗end-->
                     <!--完成工单弹窗start-->
                     <el-dialog title="完成工单" :visible.sync="completeVisible">
-                        <el-form :model="completeForm" :rules="completeRules" ref="completeForm">
-                            <el-form-item label="完成类型" prop="type" :label-width="formLabelWidth">
-                                <el-select v-model="completeForm.type" placeholder="请选择完成类型" style="width: 90%">
-                                    <el-option label="分类一" value="分类一"></el-option>
-                                    <el-option label="分类二" value="分类二"></el-option>
-                                </el-select>
+                        <el-form>
+                            <el-form-item label="完成类型" :label-width="formLabelWidth">
+                                <span>成功完成</span>
+                            </el-form-item>
+                            <el-form-item label="完成注释" :label-width="formLabelWidth">
+                                <span>已经成功</span>
                             </el-form-item>
                             <el-form-item label="服务评价" prop="star" :label-width="formLabelWidth">
                                 <el-rate
